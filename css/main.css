@@ -2,6 +2,27 @@
     box-sizing: border-box;
 }
 
+h1 {
+    margin: 0;
+}
+
 body {
     height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.board {
+    display: grid;
+    grid-template-columns: repeat(3, 10vmin);
+    grid-template-rows: repeat(3, 10vmin);
+    padding-bottom:  10px;
+}
+
+section.board div {
+    border: 2px solid black;
+    margin: 2px;
 }
