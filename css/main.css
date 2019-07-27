@@ -19,7 +19,7 @@ section.board {
     display: grid;
     grid-template-columns: repeat(3, 10vmin);
     grid-template-rows: repeat(3, 10vmin);
-    padding-bottom:  10px;
+    padding-bottom: 10px;
 }
 
 section.board div {
