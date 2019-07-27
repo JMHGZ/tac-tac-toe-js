@@ -5,14 +5,31 @@ const winCombos = [
     [0,4,8], [2,4,6]
 ];
 
+const player = 1;
+
+const msgEl = document.getElementById('msg');
+
 const grid = () => Array.from(document.getElementsByClassName('tile'));
-const brdClick = (evt) => console.log(evt.target);
+
+let tNumId = (tEl) => Number.parseInt(tEl.id.replace('t', ''));
+
+// function brdClick(evt) {
+//     if (player == 1) {
+//         document.getElementById(tNumId).value = 'X'; document.getElementById(tNumId).diabled = "disabled";
+//         player -= 1;
+//     } else { document.getElementById(tNumId).value = 'O'; document.getElementById(tNumId).disabled = "disabled";
+//     player += 1;
+//     }
+// }
+
+let playerTurn = (index, letter) => grid()[index].innerText = letter;
+let opponentTurn = (index, letter) => grid()[index].innerText = letter;
+
+let brdClick = (evt) => {
+    playerTurn(tNumId(evt.target), 'X') &&
+     opponentTurn(tNumId(evt.target), 'O');
+};
 
 const enableListeners = () => grid().forEach(_tEl => _tEl.addEventListener('click', brdClick));
 
 enableListeners();
-
-let board, turn, winner;
-
-
-

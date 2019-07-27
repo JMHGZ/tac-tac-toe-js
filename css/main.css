@@ -17,12 +17,15 @@ body {
 
 section.board {
     display: grid;
-    grid-template-columns: repeat(3, 10vmin);
-    grid-template-rows: repeat(3, 10vmin);
+    grid-template-columns: repeat(3, 15vmin);
+    grid-template-rows: repeat(3, 15vmin);
     padding-bottom: 10px;
 }
 
 section.board div {
     border: 2px solid black;
-    margin: 2px;
+    margin: 1px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 12vmin;
 }
