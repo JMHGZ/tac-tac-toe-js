@@ -4,6 +4,7 @@
 
 h1 {
     margin: 0;
+    text-transform: uppercase;
 }
 
 body {
@@ -28,4 +29,22 @@ section.board div {
     cursor: pointer;
     text-align: center;
     font-size: 12vmin;
+}
+
+#reset {
+    width: 15%;
+    padding: 10px;
+    font-size: 15px;
+    margin-top: 13px;
+
+    background-color: lightseagreen;
+    color: white;
+    border: none;
+}
+
+#reset:hover {
+    cursor: pointer;
+    background-color: darkslategrey;
+    color: white;
+    border: none;
 }
