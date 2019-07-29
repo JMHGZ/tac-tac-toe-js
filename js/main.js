@@ -6,9 +6,8 @@ const winCombos = [
 ];
 
 const player = 1;
-
 const msgEl = document.getElementById('msg');
-
+const resetGame = document.getElementById('reset');
 const grid = () => Array.from(document.getElementsByClassName('tile'));
 
 let tNumId = (tEl) => Number.parseInt(tEl.id.replace('t', ''));
@@ -25,11 +24,22 @@ let tNumId = (tEl) => Number.parseInt(tEl.id.replace('t', ''));
 let playerTurn = (index, letter) => grid()[index].innerText = letter;
 let opponentTurn = (index, letter) => grid()[index].innerText = letter;
 
+
 let brdClick = (evt) => {
-    playerTurn(tNumId(evt.target), 'X') &&
+    playerTurn(tNumId(evt.target), 'X') 
+ 
      opponentTurn(tNumId(evt.target), 'O');
 };
 
-const enableListeners = () => grid().forEach(_tEl => _tEl.addEventListener('click', brdClick));
+grid.resetGame = () => this.reset();
 
+// let resetGame = (index) => grid()[index].innerHTML = `<div></div>`;
+
+// function resetGame() {
+//     grid()[index].innerHTML = `
+//     <div>' '</div>`;
+// }
+
+const enableListeners = () => grid().forEach(_tEl => _tEl.addEventListener('click', brdClick));
+reset.addEventListener('click', resetGame);
 enableListeners();
